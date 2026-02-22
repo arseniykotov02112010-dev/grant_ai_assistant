@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import os
 
 
-def скачать_файл(url, папка='/Users/macbook/PycharmProjects/PythonProject/parser/docs', имя_файла=None):
+def download_file(url, папка='/Users/macbook/PycharmProjects/PythonProject/parser/docs', имя_файла=None):
 
     try:
         # Создаем папку если её нет
@@ -52,5 +52,5 @@ for i in range(1, 19):
         a = j.find_all('a', class_="contest-link")[1]
 
         pdf = 'https://rscf.ru' + a.get('href')
-        скачать_файл(pdf)
+        download_file(pdf)
         print(pdf)
