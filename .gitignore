@@ -35,4 +35,4 @@ __pycache__/
 *.pickle
 
 # Папка .idea (если не нужна)
-.idea/
+.idea/model/qvikhr-grant-lora/adapter_model.safetensors
