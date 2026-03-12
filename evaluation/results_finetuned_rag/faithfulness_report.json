@@ -1,0 +1,10 @@
+{
+  "mode": "finetuned_rag_faithfulness",
+  "total_examples_in_csv": 216,
+  "evaluated_examples": 216,
+  "faithful_count": 186,
+  "unfaithful_count": 30,
+  "faithfulness_score": 0.8611,
+  "target_faithfulness_f1": 0.8,
+  "notes": "Faithfulness оценена через YandexGPT native API. Параллелизм: 1, задержка: 1.0с."
+}

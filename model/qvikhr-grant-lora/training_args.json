@@ -1,0 +1,16 @@
+{
+  "train_file": "/root/data/splits/train.jsonl",
+  "val_file": "/root/data/splits/val.jsonl",
+  "output_dir": "/root/models/qvikhr-grant-lora",
+  "model_name": "Vikhrmodels/QVikhr-3-4B-Instruction",
+  "max_length": 2048,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "num_epochs": 3,
+  "per_device_batch_size": 4,
+  "gradient_accumulation_steps": 2,
+  "learning_rate": 0.0003,
+  "warmup_ratio": 0.03,
+  "seed": 42
+}

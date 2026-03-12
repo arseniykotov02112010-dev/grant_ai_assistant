@@ -1,0 +1,325 @@
+2026-03-10 15:49:43,019 - INFO - ============================================================
+2026-03-10 15:49:43,019 - INFO - ЗАПУСК ОЦЕНКИ МОДЕЛИ
+2026-03-10 15:49:43,019 - INFO - ============================================================
+2026-03-10 15:49:43,019 - INFO - PyTorch version: 2.7.1+cu118
+2026-03-10 15:49:43,019 - INFO - Transformers version: 5.3.0
+2026-03-10 15:49:43,019 - INFO - CUDA available: True
+2026-03-10 15:49:43,042 - INFO - Device: Tesla T4
+2026-03-10 15:49:43,042 - INFO - Memory: 16.72 GB
+2026-03-10 15:49:43,042 - INFO - Режим: base_rag
+2026-03-10 15:49:43,042 - INFO - Тестовый файл: data/splits/test.jsonl
+2026-03-10 15:49:43,042 - INFO - Выходная директория: results_base_rag
+2026-03-10 15:49:43,042 - INFO - Директория логов: ./logs
+2026-03-10 15:49:43,042 - INFO - Промежуточный вывод каждые 15 шагов
+2026-03-10 15:49:43,490 - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+2026-03-10 15:49:43,521 - INFO - Загружено 216 тестовых примеров
+2026-03-10 15:49:43,522 - INFO - Загрузка модели: Vikhrmodels/QVikhr-3-4B-Instruction
+2026-03-10 15:49:43,522 - INFO - 4-битное квантование включено
+2026-03-10 15:49:43,781 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 15:49:43,818 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/config.json "HTTP/1.1 200 OK"
+2026-03-10 15:49:43,962 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 15:49:43,999 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-10 15:49:44,141 - INFO - HTTP Request: GET https://huggingface.co/api/models/Vikhrmodels/QVikhr-3-4B-Instruction/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-10 15:49:44,284 - INFO - HTTP Request: GET https://huggingface.co/api/models/Vikhrmodels/QVikhr-3-4B-Instruction/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-10 15:49:45,632 - INFO - HTTP Request: GET https://huggingface.co/api/models/Vikhrmodels/QVikhr-3-4B-Instruction "HTTP/1.1 200 OK"
+2026-03-10 15:49:45,773 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 15:49:45,811 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/config.json "HTTP/1.1 200 OK"
+2026-03-10 15:49:45,961 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 15:49:45,962 - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-10 15:49:45,998 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/config.json "HTTP/1.1 200 OK"
+2026-03-10 15:49:51,616 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 15:49:51,657 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/generation_config.json "HTTP/1.1 200 OK"
+2026-03-10 15:49:51,800 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/custom_generate/generate.py "HTTP/1.1 404 Not Found"
+2026-03-10 15:49:51,808 - INFO - Всего параметров: 2,205,810,176
+2026-03-10 15:49:51,809 - INFO - Устройство модели: cuda:0
+2026-03-10 15:49:51,809 - INFO - Загрузка метрик...
+2026-03-10 15:50:22,535 - INFO - Using default tokenizer.
+2026-03-10 15:50:22,905 - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-multilingual-cased/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-03-10 15:50:23,058 - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-multilingual-cased/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-10 15:50:23,204 - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-multilingual-cased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 15:50:23,348 - INFO - HTTP Request: GET https://huggingface.co/api/models/google-bert/bert-base-multilingual-cased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-10 15:50:23,490 - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-multilingual-cased/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 15:50:23,640 - INFO - HTTP Request: GET https://huggingface.co/api/models/google-bert/bert-base-multilingual-cased/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-10 15:50:24,222 - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-multilingual-cased "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 15:50:24,372 - INFO - HTTP Request: GET https://huggingface.co/api/models/google-bert/bert-base-multilingual-cased "HTTP/1.1 200 OK"
+2026-03-10 15:50:24,570 - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-multilingual-cased/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-03-10 15:50:24,744 - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-multilingual-cased/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-03-10 15:50:53,833 - INFO - Using default tokenizer.
+2026-03-10 15:51:22,583 - INFO - Using default tokenizer.
+2026-03-10 15:51:51,327 - INFO - Using default tokenizer.
+2026-03-10 15:52:20,032 - INFO - Using default tokenizer.
+2026-03-10 15:52:49,078 - INFO - Using default tokenizer.
+2026-03-10 15:53:17,713 - INFO - Using default tokenizer.
+2026-03-10 15:53:46,483 - INFO - Using default tokenizer.
+2026-03-10 15:54:15,040 - INFO - Using default tokenizer.
+2026-03-10 15:54:43,529 - INFO - Using default tokenizer.
+2026-03-10 15:55:12,076 - INFO - Using default tokenizer.
+2026-03-10 15:55:40,730 - INFO - Using default tokenizer.
+2026-03-10 15:56:09,355 - INFO - Using default tokenizer.
+2026-03-10 15:56:38,081 - INFO - Using default tokenizer.
+2026-03-10 15:57:06,796 - INFO - Using default tokenizer.
+2026-03-10 15:57:06,951 - INFO - === Промежуточные результаты после 15 примеров ===
+2026-03-10 15:57:06,951 - INFO -   ROUGE-L: 0.2650 (цель ≥0.5)
+2026-03-10 15:57:06,951 - INFO -   BERTScore F1: 0.6759 (цель ≥0.8)
+2026-03-10 15:57:06,952 - INFO -   F1 факты: 0.3436 (цель ≥0.75)
+2026-03-10 15:57:35,451 - INFO - Using default tokenizer.
+2026-03-10 15:58:04,133 - INFO - Using default tokenizer.
+2026-03-10 15:58:32,904 - INFO - Using default tokenizer.
+2026-03-10 15:59:01,676 - INFO - Using default tokenizer.
+2026-03-10 15:59:30,358 - INFO - Using default tokenizer.
+2026-03-10 15:59:59,028 - INFO - Using default tokenizer.
+2026-03-10 16:00:27,779 - INFO - Using default tokenizer.
+2026-03-10 16:00:56,556 - INFO - Using default tokenizer.
+2026-03-10 16:01:25,328 - INFO - Using default tokenizer.
+2026-03-10 16:01:54,032 - INFO - Using default tokenizer.
+2026-03-10 16:02:22,720 - INFO - Using default tokenizer.
+2026-03-10 16:02:51,393 - INFO - Using default tokenizer.
+2026-03-10 16:03:20,221 - INFO - Using default tokenizer.
+2026-03-10 16:03:49,069 - INFO - Using default tokenizer.
+2026-03-10 16:04:17,843 - INFO - Using default tokenizer.
+2026-03-10 16:04:18,005 - INFO - === Промежуточные результаты после 30 примеров ===
+2026-03-10 16:04:18,005 - INFO -   ROUGE-L: 0.3065 (цель ≥0.5)
+2026-03-10 16:04:18,005 - INFO -   BERTScore F1: 0.6810 (цель ≥0.8)
+2026-03-10 16:04:18,005 - INFO -   F1 факты: 0.3967 (цель ≥0.75)
+2026-03-10 16:04:46,622 - INFO - Using default tokenizer.
+2026-03-10 16:05:15,448 - INFO - Using default tokenizer.
+2026-03-10 16:05:44,080 - INFO - Using default tokenizer.
+2026-03-10 16:06:12,725 - INFO - Using default tokenizer.
+2026-03-10 16:06:41,477 - INFO - Using default tokenizer.
+2026-03-10 16:07:10,239 - INFO - Using default tokenizer.
+2026-03-10 16:07:39,097 - INFO - Using default tokenizer.
+2026-03-10 16:08:08,010 - INFO - Using default tokenizer.
+2026-03-10 16:08:36,851 - INFO - Using default tokenizer.
+2026-03-10 16:09:05,688 - INFO - Using default tokenizer.
+2026-03-10 16:09:34,292 - INFO - Using default tokenizer.
+2026-03-10 16:10:02,950 - INFO - Using default tokenizer.
+2026-03-10 16:10:31,734 - INFO - Using default tokenizer.
+2026-03-10 16:11:00,518 - INFO - Using default tokenizer.
+2026-03-10 16:11:29,185 - INFO - Using default tokenizer.
+2026-03-10 16:11:29,344 - INFO - === Промежуточные результаты после 45 примеров ===
+2026-03-10 16:11:29,344 - INFO -   ROUGE-L: 0.3184 (цель ≥0.5)
+2026-03-10 16:11:29,344 - INFO -   BERTScore F1: 0.6798 (цель ≥0.8)
+2026-03-10 16:11:29,344 - INFO -   F1 факты: 0.3921 (цель ≥0.75)
+2026-03-10 16:11:57,859 - INFO - Using default tokenizer.
+2026-03-10 16:12:26,678 - INFO - Using default tokenizer.
+2026-03-10 16:12:55,409 - INFO - Using default tokenizer.
+2026-03-10 16:13:24,238 - INFO - Using default tokenizer.
+2026-03-10 16:13:53,039 - INFO - Using default tokenizer.
+2026-03-10 16:14:21,886 - INFO - Using default tokenizer.
+2026-03-10 16:14:50,737 - INFO - Using default tokenizer.
+2026-03-10 16:15:19,475 - INFO - Using default tokenizer.
+2026-03-10 16:15:48,299 - INFO - Using default tokenizer.
+2026-03-10 16:16:17,172 - INFO - Using default tokenizer.
+2026-03-10 16:16:45,931 - INFO - Using default tokenizer.
+2026-03-10 16:17:14,826 - INFO - Using default tokenizer.
+2026-03-10 16:17:43,545 - INFO - Using default tokenizer.
+2026-03-10 16:18:12,289 - INFO - Using default tokenizer.
+2026-03-10 16:18:41,077 - INFO - Using default tokenizer.
+2026-03-10 16:18:41,235 - INFO - === Промежуточные результаты после 60 примеров ===
+2026-03-10 16:18:41,236 - INFO -   ROUGE-L: 0.3245 (цель ≥0.5)
+2026-03-10 16:18:41,236 - INFO -   BERTScore F1: 0.6810 (цель ≥0.8)
+2026-03-10 16:18:41,236 - INFO -   F1 факты: 0.4218 (цель ≥0.75)
+2026-03-10 16:19:09,824 - INFO - Using default tokenizer.
+2026-03-10 16:19:38,681 - INFO - Using default tokenizer.
+2026-03-10 16:20:07,282 - INFO - Using default tokenizer.
+2026-03-10 16:20:35,963 - INFO - Using default tokenizer.
+2026-03-10 16:21:04,530 - INFO - Using default tokenizer.
+2026-03-10 16:21:33,061 - INFO - Using default tokenizer.
+2026-03-10 16:22:01,728 - INFO - Using default tokenizer.
+2026-03-10 16:22:30,440 - INFO - Using default tokenizer.
+2026-03-10 16:22:59,039 - INFO - Using default tokenizer.
+2026-03-10 16:23:27,588 - INFO - Using default tokenizer.
+2026-03-10 16:23:56,177 - INFO - Using default tokenizer.
+2026-03-10 16:24:24,727 - INFO - Using default tokenizer.
+2026-03-10 16:24:53,454 - INFO - Using default tokenizer.
+2026-03-10 16:25:22,078 - INFO - Using default tokenizer.
+2026-03-10 16:25:50,586 - INFO - Using default tokenizer.
+2026-03-10 16:25:50,744 - INFO - === Промежуточные результаты после 75 примеров ===
+2026-03-10 16:25:50,744 - INFO -   ROUGE-L: 0.3198 (цель ≥0.5)
+2026-03-10 16:25:50,744 - INFO -   BERTScore F1: 0.6851 (цель ≥0.8)
+2026-03-10 16:25:50,744 - INFO -   F1 факты: 0.4224 (цель ≥0.75)
+2026-03-10 16:26:19,127 - INFO - Using default tokenizer.
+2026-03-10 16:26:47,689 - INFO - Using default tokenizer.
+2026-03-10 16:27:16,363 - INFO - Using default tokenizer.
+2026-03-10 16:27:45,009 - INFO - Using default tokenizer.
+2026-03-10 16:28:13,660 - INFO - Using default tokenizer.
+2026-03-10 16:28:42,235 - INFO - Using default tokenizer.
+2026-03-10 16:29:10,878 - INFO - Using default tokenizer.
+2026-03-10 16:29:39,464 - INFO - Using default tokenizer.
+2026-03-10 16:30:08,104 - INFO - Using default tokenizer.
+2026-03-10 16:30:36,845 - INFO - Using default tokenizer.
+2026-03-10 16:31:05,488 - INFO - Using default tokenizer.
+2026-03-10 16:31:34,031 - INFO - Using default tokenizer.
+2026-03-10 16:32:02,596 - INFO - Using default tokenizer.
+2026-03-10 16:32:31,080 - INFO - Using default tokenizer.
+2026-03-10 16:32:59,591 - INFO - Using default tokenizer.
+2026-03-10 16:32:59,750 - INFO - === Промежуточные результаты после 90 примеров ===
+2026-03-10 16:32:59,750 - INFO -   ROUGE-L: 0.3161 (цель ≥0.5)
+2026-03-10 16:32:59,750 - INFO -   BERTScore F1: 0.6861 (цель ≥0.8)
+2026-03-10 16:32:59,750 - INFO -   F1 факты: 0.4349 (цель ≥0.75)
+2026-03-10 16:33:28,209 - INFO - Using default tokenizer.
+2026-03-10 16:33:56,786 - INFO - Using default tokenizer.
+2026-03-10 16:34:25,235 - INFO - Using default tokenizer.
+2026-03-10 16:34:53,784 - INFO - Using default tokenizer.
+2026-03-10 16:35:22,370 - INFO - Using default tokenizer.
+2026-03-10 16:35:50,810 - INFO - Using default tokenizer.
+2026-03-10 16:36:19,376 - INFO - Using default tokenizer.
+2026-03-10 16:36:48,113 - INFO - Using default tokenizer.
+2026-03-10 16:37:16,641 - INFO - Using default tokenizer.
+2026-03-10 16:37:45,380 - INFO - Using default tokenizer.
+2026-03-10 16:38:13,927 - INFO - Using default tokenizer.
+2026-03-10 16:38:42,375 - INFO - Using default tokenizer.
+2026-03-10 16:39:10,940 - INFO - Using default tokenizer.
+2026-03-10 16:39:39,449 - INFO - Using default tokenizer.
+2026-03-10 16:40:07,960 - INFO - Using default tokenizer.
+2026-03-10 16:40:08,121 - INFO - === Промежуточные результаты после 105 примеров ===
+2026-03-10 16:40:08,121 - INFO -   ROUGE-L: 0.3094 (цель ≥0.5)
+2026-03-10 16:40:08,121 - INFO -   BERTScore F1: 0.6903 (цель ≥0.8)
+2026-03-10 16:40:08,121 - INFO -   F1 факты: 0.4413 (цель ≥0.75)
+2026-03-10 16:40:36,457 - INFO - Using default tokenizer.
+2026-03-10 16:41:05,066 - INFO - Using default tokenizer.
+2026-03-10 16:41:33,623 - INFO - Using default tokenizer.
+2026-03-10 16:42:02,165 - INFO - Using default tokenizer.
+2026-03-10 16:42:30,684 - INFO - Using default tokenizer.
+2026-03-10 16:42:59,244 - INFO - Using default tokenizer.
+2026-03-10 16:43:27,719 - INFO - Using default tokenizer.
+2026-03-10 16:43:56,200 - INFO - Using default tokenizer.
+2026-03-10 16:44:24,567 - INFO - Using default tokenizer.
+2026-03-10 16:44:53,074 - INFO - Using default tokenizer.
+2026-03-10 16:45:21,658 - INFO - Using default tokenizer.
+2026-03-10 16:45:50,257 - INFO - Using default tokenizer.
+2026-03-10 16:46:18,774 - INFO - Using default tokenizer.
+2026-03-10 16:46:47,152 - INFO - Using default tokenizer.
+2026-03-10 16:47:15,528 - INFO - Using default tokenizer.
+2026-03-10 16:47:15,687 - INFO - === Промежуточные результаты после 120 примеров ===
+2026-03-10 16:47:15,687 - INFO -   ROUGE-L: 0.2970 (цель ≥0.5)
+2026-03-10 16:47:15,687 - INFO -   BERTScore F1: 0.6909 (цель ≥0.8)
+2026-03-10 16:47:15,687 - INFO -   F1 факты: 0.4377 (цель ≥0.75)
+2026-03-10 16:47:44,002 - INFO - Using default tokenizer.
+2026-03-10 16:48:12,434 - INFO - Using default tokenizer.
+2026-03-10 16:48:40,848 - INFO - Using default tokenizer.
+2026-03-10 16:49:09,347 - INFO - Using default tokenizer.
+2026-03-10 16:49:37,797 - INFO - Using default tokenizer.
+2026-03-10 16:50:06,236 - INFO - Using default tokenizer.
+2026-03-10 16:50:34,722 - INFO - Using default tokenizer.
+2026-03-10 16:51:03,158 - INFO - Using default tokenizer.
+2026-03-10 16:51:31,613 - INFO - Using default tokenizer.
+2026-03-10 16:52:00,093 - INFO - Using default tokenizer.
+2026-03-10 16:52:28,588 - INFO - Using default tokenizer.
+2026-03-10 16:52:56,968 - INFO - Using default tokenizer.
+2026-03-10 16:53:25,378 - INFO - Using default tokenizer.
+2026-03-10 16:53:53,732 - INFO - Using default tokenizer.
+2026-03-10 16:54:22,162 - INFO - Using default tokenizer.
+2026-03-10 16:54:22,317 - INFO - === Промежуточные результаты после 135 примеров ===
+2026-03-10 16:54:22,318 - INFO -   ROUGE-L: 0.2929 (цель ≥0.5)
+2026-03-10 16:54:22,318 - INFO -   BERTScore F1: 0.6908 (цель ≥0.8)
+2026-03-10 16:54:22,318 - INFO -   F1 факты: 0.4461 (цель ≥0.75)
+2026-03-10 16:54:50,577 - INFO - Using default tokenizer.
+2026-03-10 16:55:18,913 - INFO - Using default tokenizer.
+2026-03-10 16:55:47,303 - INFO - Using default tokenizer.
+2026-03-10 16:56:15,717 - INFO - Using default tokenizer.
+2026-03-10 16:56:44,115 - INFO - Using default tokenizer.
+2026-03-10 16:57:12,531 - INFO - Using default tokenizer.
+2026-03-10 16:57:40,969 - INFO - Using default tokenizer.
+2026-03-10 16:58:09,440 - INFO - Using default tokenizer.
+2026-03-10 16:58:37,771 - INFO - Using default tokenizer.
+2026-03-10 16:59:06,129 - INFO - Using default tokenizer.
+2026-03-10 16:59:34,510 - INFO - Using default tokenizer.
+2026-03-10 17:00:02,925 - INFO - Using default tokenizer.
+2026-03-10 17:00:31,375 - INFO - Using default tokenizer.
+2026-03-10 17:01:00,025 - INFO - Using default tokenizer.
+2026-03-10 17:01:28,483 - INFO - Using default tokenizer.
+2026-03-10 17:01:28,642 - INFO - === Промежуточные результаты после 150 примеров ===
+2026-03-10 17:01:28,642 - INFO -   ROUGE-L: 0.2983 (цель ≥0.5)
+2026-03-10 17:01:28,642 - INFO -   BERTScore F1: 0.6936 (цель ≥0.8)
+2026-03-10 17:01:28,642 - INFO -   F1 факты: 0.4473 (цель ≥0.75)
+2026-03-10 17:01:56,958 - INFO - Using default tokenizer.
+2026-03-10 17:02:25,497 - INFO - Using default tokenizer.
+2026-03-10 17:02:53,764 - INFO - Using default tokenizer.
+2026-03-10 17:03:22,764 - INFO - Using default tokenizer.
+2026-03-10 17:03:51,303 - INFO - Using default tokenizer.
+2026-03-10 17:04:19,780 - INFO - Using default tokenizer.
+2026-03-10 17:04:48,291 - INFO - Using default tokenizer.
+2026-03-10 17:05:16,800 - INFO - Using default tokenizer.
+2026-03-10 17:05:45,317 - INFO - Using default tokenizer.
+2026-03-10 17:06:13,832 - INFO - Using default tokenizer.
+2026-03-10 17:06:42,310 - INFO - Using default tokenizer.
+2026-03-10 17:07:10,949 - INFO - Using default tokenizer.
+2026-03-10 17:07:39,383 - INFO - Using default tokenizer.
+2026-03-10 17:08:07,936 - INFO - Using default tokenizer.
+2026-03-10 17:08:36,387 - INFO - Using default tokenizer.
+2026-03-10 17:08:36,545 - INFO - === Промежуточные результаты после 165 примеров ===
+2026-03-10 17:08:36,545 - INFO -   ROUGE-L: 0.2944 (цель ≥0.5)
+2026-03-10 17:08:36,545 - INFO -   BERTScore F1: 0.6931 (цель ≥0.8)
+2026-03-10 17:08:36,545 - INFO -   F1 факты: 0.4567 (цель ≥0.75)
+2026-03-10 17:09:04,852 - INFO - Using default tokenizer.
+2026-03-10 17:09:33,210 - INFO - Using default tokenizer.
+2026-03-10 17:10:01,788 - INFO - Using default tokenizer.
+2026-03-10 17:10:30,230 - INFO - Using default tokenizer.
+2026-03-10 17:10:58,686 - INFO - Using default tokenizer.
+2026-03-10 17:11:27,141 - INFO - Using default tokenizer.
+2026-03-10 17:11:55,588 - INFO - Using default tokenizer.
+2026-03-10 17:12:24,114 - INFO - Using default tokenizer.
+2026-03-10 17:12:52,538 - INFO - Using default tokenizer.
+2026-03-10 17:13:20,909 - INFO - Using default tokenizer.
+2026-03-10 17:13:49,377 - INFO - Using default tokenizer.
+2026-03-10 17:14:17,778 - INFO - Using default tokenizer.
+2026-03-10 17:14:46,536 - INFO - Using default tokenizer.
+2026-03-10 17:15:15,015 - INFO - Using default tokenizer.
+2026-03-10 17:15:43,563 - INFO - Using default tokenizer.
+2026-03-10 17:15:43,723 - INFO - === Промежуточные результаты после 180 примеров ===
+2026-03-10 17:15:43,723 - INFO -   ROUGE-L: 0.2880 (цель ≥0.5)
+2026-03-10 17:15:43,723 - INFO -   BERTScore F1: 0.6919 (цель ≥0.8)
+2026-03-10 17:15:43,723 - INFO -   F1 факты: 0.4429 (цель ≥0.75)
+2026-03-10 17:16:12,013 - INFO - Using default tokenizer.
+2026-03-10 17:16:40,498 - INFO - Using default tokenizer.
+2026-03-10 17:17:08,955 - INFO - Using default tokenizer.
+2026-03-10 17:17:37,595 - INFO - Using default tokenizer.
+2026-03-10 17:18:06,171 - INFO - Using default tokenizer.
+2026-03-10 17:18:34,632 - INFO - Using default tokenizer.
+2026-03-10 17:19:03,036 - INFO - Using default tokenizer.
+2026-03-10 17:19:31,501 - INFO - Using default tokenizer.
+2026-03-10 17:20:00,036 - INFO - Using default tokenizer.
+2026-03-10 17:20:28,354 - INFO - Using default tokenizer.
+2026-03-10 17:20:56,778 - INFO - Using default tokenizer.
+2026-03-10 17:21:25,395 - INFO - Using default tokenizer.
+2026-03-10 17:21:54,022 - INFO - Using default tokenizer.
+2026-03-10 17:22:22,559 - INFO - Using default tokenizer.
+2026-03-10 17:22:51,021 - INFO - Using default tokenizer.
+2026-03-10 17:22:51,182 - INFO - === Промежуточные результаты после 195 примеров ===
+2026-03-10 17:22:51,182 - INFO -   ROUGE-L: 0.2841 (цель ≥0.5)
+2026-03-10 17:22:51,182 - INFO -   BERTScore F1: 0.6926 (цель ≥0.8)
+2026-03-10 17:22:51,182 - INFO -   F1 факты: 0.4454 (цель ≥0.75)
+2026-03-10 17:23:19,555 - INFO - Using default tokenizer.
+2026-03-10 17:23:47,987 - INFO - Using default tokenizer.
+2026-03-10 17:24:16,589 - INFO - Using default tokenizer.
+2026-03-10 17:24:45,220 - INFO - Using default tokenizer.
+2026-03-10 17:25:13,772 - INFO - Using default tokenizer.
+2026-03-10 17:25:42,339 - INFO - Using default tokenizer.
+2026-03-10 17:26:10,872 - INFO - Using default tokenizer.
+2026-03-10 17:26:39,400 - INFO - Using default tokenizer.
+2026-03-10 17:27:07,772 - INFO - Using default tokenizer.
+2026-03-10 17:27:36,186 - INFO - Using default tokenizer.
+2026-03-10 17:28:04,702 - INFO - Using default tokenizer.
+2026-03-10 17:28:33,279 - INFO - Using default tokenizer.
+2026-03-10 17:29:01,711 - INFO - Using default tokenizer.
+2026-03-10 17:29:30,152 - INFO - Using default tokenizer.
+2026-03-10 17:29:58,681 - INFO - Using default tokenizer.
+2026-03-10 17:29:58,838 - INFO - === Промежуточные результаты после 210 примеров ===
+2026-03-10 17:29:58,839 - INFO -   ROUGE-L: 0.2782 (цель ≥0.5)
+2026-03-10 17:29:58,839 - INFO -   BERTScore F1: 0.6927 (цель ≥0.8)
+2026-03-10 17:29:58,839 - INFO -   F1 факты: 0.4409 (цель ≥0.75)
+2026-03-10 17:30:27,151 - INFO - Using default tokenizer.
+2026-03-10 17:30:55,583 - INFO - Using default tokenizer.
+2026-03-10 17:31:24,075 - INFO - Using default tokenizer.
+2026-03-10 17:31:52,485 - INFO - Using default tokenizer.
+2026-03-10 17:32:20,800 - INFO - Using default tokenizer.
+2026-03-10 17:32:49,114 - INFO - Using default tokenizer.
+2026-03-10 17:32:49,275 - INFO - Сохранение CSV в results_base_rag/results_base_rag.csv
+2026-03-10 17:32:49,288 - INFO - Сохранение JSON в results_base_rag/summary_base_rag.json
+2026-03-10 17:32:49,288 - INFO - Результаты сохранены в results_base_rag
+2026-03-10 17:32:49,288 - INFO - ИТОГОВЫЕ МЕТРИКИ для base_rag:
+2026-03-10 17:32:49,288 - INFO -   ROUGE-L: 0.2731 (цель ≥0.5) ❌
+2026-03-10 17:32:49,288 - INFO -   BERTScore F1: 0.6930 (цель ≥0.8) ❌
+2026-03-10 17:32:49,288 - INFO -   F1 факты: 0.4317 (цель ≥0.75) ❌
+2026-03-10 17:32:49,288 - INFO -   Примеров с фактами: 156, без фактов: 60

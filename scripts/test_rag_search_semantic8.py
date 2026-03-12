@@ -18,7 +18,7 @@ VECTOR_DB_PATH = project_root / "data" / "vector_db"
 VAL_DATASET_PATH = project_root / "data" / "splits" / "val.jsonl"
 
 # Параметры теста
-TEST_SAMPLE_SIZE = 150  # Сколько QA-пар проверить
+TEST_SAMPLE_SIZE = 210  # Сколько QA-пар проверить
 SEARCH_TOP_K = 3  # Сколько чанков искать
 SIMILARITY_THRESHOLD = 0.5
 

@@ -6,8 +6,8 @@ from collections import defaultdict
 
 def create_splits(dataset_path: Path, output_dir: Path, train_ratio=0.7, val_ratio=0.15, seed=42):
     """
-    Разделяет датасет на train/val/test по документам.
-    Сохраняет в output_dir файлы train.jsonl, val.jsonl, test.jsonl.
+    Разделяет датасет на train/val/test12 по документам.
+    Сохраняет в output_dir файлы train.jsonl, val.jsonl, test12.jsonl.
     """
     random.seed(seed)
 
@@ -37,7 +37,7 @@ def create_splits(dataset_path: Path, output_dir: Path, train_ratio=0.7, val_rat
     splits = {
         'train': train_docs,
         'val': val_docs,
-        'test': test_docs
+        'test12': test_docs
     }
 
     stats = {}
@@ -70,7 +70,7 @@ def create_splits(dataset_path: Path, output_dir: Path, train_ratio=0.7, val_rat
 if __name__ == "__main__":
     # ========== НАСТРОЙКИ ==========
     BASE_DIR = Path(__file__).parent.parent  # Корень проекта
-    DATASET_PATH = BASE_DIR / "data" / "processed" / "sft_dataset.jsonl"
+    DATASET_PATH = BASE_DIR / "data" / "processed" / "finetuning_dataset.jsonl"
     OUTPUT_DIR = BASE_DIR / "data" / "splits"
     # ===============================
 

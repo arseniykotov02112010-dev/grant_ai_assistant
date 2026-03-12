@@ -1,0 +1,268 @@
+2026-03-10 12:21:09,306 - INFO - ============================================================
+2026-03-10 12:21:09,306 - INFO - ЗАПУСК ОЦЕНКИ МОДЕЛИ
+2026-03-10 12:21:09,306 - INFO - ============================================================
+2026-03-10 12:21:09,306 - INFO - PyTorch version: 2.7.1+cu118
+2026-03-10 12:21:09,306 - INFO - Transformers version: 5.3.0
+2026-03-10 12:21:09,306 - INFO - CUDA available: True
+2026-03-10 12:21:09,414 - INFO - Device: Tesla T4
+2026-03-10 12:21:09,414 - INFO - Memory: 16.72 GB
+2026-03-10 12:21:09,416 - INFO - Режим: base_rag
+2026-03-10 12:21:09,416 - INFO - Тестовый файл: data/splits/test.jsonl
+2026-03-10 12:21:09,416 - INFO - Выходная директория: results_base_rag
+2026-03-10 12:21:09,416 - INFO - Директория логов: ./logs
+2026-03-10 12:21:10,022 - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+2026-03-10 12:21:10,495 - INFO - Загружено 216 тестовых примеров
+2026-03-10 12:21:10,496 - INFO - Загрузка модели: Vikhrmodels/QVikhr-3-4B-Instruction
+2026-03-10 12:21:10,496 - INFO - 4-битное квантование включено
+2026-03-10 12:21:10,726 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 12:21:10,755 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/config.json "HTTP/1.1 200 OK"
+2026-03-10 12:21:11,065 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 12:21:11,066 - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-10 12:21:11,098 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-10 12:21:11,393 - INFO - HTTP Request: GET https://huggingface.co/api/models/Vikhrmodels/QVikhr-3-4B-Instruction/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-10 12:21:11,541 - INFO - HTTP Request: GET https://huggingface.co/api/models/Vikhrmodels/QVikhr-3-4B-Instruction/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-10 12:21:13,314 - INFO - HTTP Request: GET https://huggingface.co/api/models/Vikhrmodels/QVikhr-3-4B-Instruction "HTTP/1.1 200 OK"
+2026-03-10 12:21:13,469 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 12:21:13,498 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/config.json "HTTP/1.1 200 OK"
+2026-03-10 12:21:13,688 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 12:21:13,719 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/config.json "HTTP/1.1 200 OK"
+2026-03-10 12:25:19,546 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 12:25:19,645 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/generation_config.json "HTTP/1.1 200 OK"
+2026-03-10 12:25:19,834 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/custom_generate/generate.py "HTTP/1.1 404 Not Found"
+2026-03-10 12:25:19,843 - INFO - Всего параметров: 2,205,810,176
+2026-03-10 12:25:19,843 - INFO - Устройство модели: cuda:0
+2026-03-10 12:25:19,843 - INFO - Загрузка метрик...
+2026-03-10 12:26:01,093 - INFO - Using default tokenizer.
+2026-03-10 12:26:01,519 - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-multilingual-cased/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-03-10 12:26:01,735 - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-multilingual-cased/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-10 12:26:01,956 - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-multilingual-cased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 12:26:02,103 - INFO - HTTP Request: GET https://huggingface.co/api/models/google-bert/bert-base-multilingual-cased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-10 12:26:02,249 - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-multilingual-cased/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 12:26:02,392 - INFO - HTTP Request: GET https://huggingface.co/api/models/google-bert/bert-base-multilingual-cased/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-10 12:26:03,031 - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-multilingual-cased "HTTP/1.1 307 Temporary Redirect"
+2026-03-10 12:26:03,174 - INFO - HTTP Request: GET https://huggingface.co/api/models/google-bert/bert-base-multilingual-cased "HTTP/1.1 200 OK"
+2026-03-10 12:26:03,317 - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-multilingual-cased/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-03-10 12:26:03,493 - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-multilingual-cased/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-03-10 12:26:52,493 - INFO - Using default tokenizer.
+2026-03-10 12:27:21,690 - INFO - Using default tokenizer.
+2026-03-10 12:27:50,898 - INFO - Using default tokenizer.
+2026-03-10 12:28:20,229 - INFO - Using default tokenizer.
+2026-03-10 12:28:49,715 - INFO - Using default tokenizer.
+2026-03-10 12:29:18,830 - INFO - Using default tokenizer.
+2026-03-10 12:29:48,065 - INFO - Using default tokenizer.
+2026-03-10 12:30:17,174 - INFO - Using default tokenizer.
+2026-03-10 12:30:46,306 - INFO - Using default tokenizer.
+2026-03-10 12:31:15,686 - INFO - Using default tokenizer.
+2026-03-10 12:31:44,784 - INFO - Using default tokenizer.
+2026-03-10 12:32:13,977 - INFO - Using default tokenizer.
+2026-03-10 12:32:43,148 - INFO - Using default tokenizer.
+2026-03-10 12:33:12,511 - INFO - Using default tokenizer.
+2026-03-10 12:33:41,622 - INFO - Using default tokenizer.
+2026-03-10 12:34:10,844 - INFO - Using default tokenizer.
+2026-03-10 12:34:39,965 - INFO - Using default tokenizer.
+2026-03-10 12:35:09,150 - INFO - Using default tokenizer.
+2026-03-10 12:35:38,375 - INFO - Using default tokenizer.
+2026-03-10 12:36:07,488 - INFO - Using default tokenizer.
+2026-03-10 12:36:36,603 - INFO - Using default tokenizer.
+2026-03-10 12:37:05,758 - INFO - Using default tokenizer.
+2026-03-10 12:37:34,931 - INFO - Using default tokenizer.
+2026-03-10 12:38:04,087 - INFO - Using default tokenizer.
+2026-03-10 12:38:33,122 - INFO - Using default tokenizer.
+2026-03-10 12:39:02,224 - INFO - Using default tokenizer.
+2026-03-10 12:39:31,346 - INFO - Using default tokenizer.
+2026-03-10 12:40:00,642 - INFO - Using default tokenizer.
+2026-03-10 12:40:29,728 - INFO - Using default tokenizer.
+2026-03-10 12:40:58,863 - INFO - Using default tokenizer.
+2026-03-10 12:41:27,926 - INFO - Using default tokenizer.
+2026-03-10 12:41:57,105 - INFO - Using default tokenizer.
+2026-03-10 12:42:26,199 - INFO - Using default tokenizer.
+2026-03-10 12:42:55,528 - INFO - Using default tokenizer.
+2026-03-10 12:43:24,570 - INFO - Using default tokenizer.
+2026-03-10 12:43:53,639 - INFO - Using default tokenizer.
+2026-03-10 12:44:22,917 - INFO - Using default tokenizer.
+2026-03-10 12:44:52,154 - INFO - Using default tokenizer.
+2026-03-10 12:45:21,304 - INFO - Using default tokenizer.
+2026-03-10 12:45:50,400 - INFO - Using default tokenizer.
+2026-03-10 12:46:19,505 - INFO - Using default tokenizer.
+2026-03-10 12:46:48,700 - INFO - Using default tokenizer.
+2026-03-10 12:47:17,867 - INFO - Using default tokenizer.
+2026-03-10 12:47:47,105 - INFO - Using default tokenizer.
+2026-03-10 12:48:16,284 - INFO - Using default tokenizer.
+2026-03-10 12:48:45,570 - INFO - Using default tokenizer.
+2026-03-10 12:49:14,814 - INFO - Using default tokenizer.
+2026-03-10 12:49:43,985 - INFO - Using default tokenizer.
+2026-03-10 12:50:13,225 - INFO - Using default tokenizer.
+2026-03-10 12:50:42,518 - INFO - Using default tokenizer.
+2026-03-10 12:51:11,683 - INFO - Using default tokenizer.
+2026-03-10 12:51:40,865 - INFO - Using default tokenizer.
+2026-03-10 12:52:10,127 - INFO - Using default tokenizer.
+2026-03-10 12:52:39,280 - INFO - Using default tokenizer.
+2026-03-10 12:53:08,418 - INFO - Using default tokenizer.
+2026-03-10 12:53:37,591 - INFO - Using default tokenizer.
+2026-03-10 12:54:06,758 - INFO - Using default tokenizer.
+2026-03-10 12:54:35,918 - INFO - Using default tokenizer.
+2026-03-10 12:55:05,163 - INFO - Using default tokenizer.
+2026-03-10 12:55:34,442 - INFO - Using default tokenizer.
+2026-03-10 12:56:03,574 - INFO - Using default tokenizer.
+2026-03-10 12:56:32,657 - INFO - Using default tokenizer.
+2026-03-10 12:57:01,795 - INFO - Using default tokenizer.
+2026-03-10 12:57:30,905 - INFO - Using default tokenizer.
+2026-03-10 12:58:00,017 - INFO - Using default tokenizer.
+2026-03-10 12:58:29,153 - INFO - Using default tokenizer.
+2026-03-10 12:58:58,307 - INFO - Using default tokenizer.
+2026-03-10 12:59:27,232 - INFO - Using default tokenizer.
+2026-03-10 12:59:56,330 - INFO - Using default tokenizer.
+2026-03-10 13:00:25,462 - INFO - Using default tokenizer.
+2026-03-10 13:00:54,502 - INFO - Using default tokenizer.
+2026-03-10 13:01:23,763 - INFO - Using default tokenizer.
+2026-03-10 13:01:52,936 - INFO - Using default tokenizer.
+2026-03-10 13:02:21,932 - INFO - Using default tokenizer.
+2026-03-10 13:02:50,893 - INFO - Using default tokenizer.
+2026-03-10 13:03:20,073 - INFO - Using default tokenizer.
+2026-03-10 13:03:49,105 - INFO - Using default tokenizer.
+2026-03-10 13:04:18,203 - INFO - Using default tokenizer.
+2026-03-10 13:04:47,242 - INFO - Using default tokenizer.
+2026-03-10 13:05:16,265 - INFO - Using default tokenizer.
+2026-03-10 13:05:45,385 - INFO - Using default tokenizer.
+2026-03-10 13:06:14,597 - INFO - Using default tokenizer.
+2026-03-10 13:06:43,646 - INFO - Using default tokenizer.
+2026-03-10 13:07:12,844 - INFO - Using default tokenizer.
+2026-03-10 13:07:42,006 - INFO - Using default tokenizer.
+2026-03-10 13:08:11,026 - INFO - Using default tokenizer.
+2026-03-10 13:08:40,080 - INFO - Using default tokenizer.
+2026-03-10 13:09:09,041 - INFO - Using default tokenizer.
+2026-03-10 13:09:37,947 - INFO - Using default tokenizer.
+2026-03-10 13:10:07,059 - INFO - Using default tokenizer.
+2026-03-10 13:10:36,014 - INFO - Using default tokenizer.
+2026-03-10 13:11:05,047 - INFO - Using default tokenizer.
+2026-03-10 13:11:34,158 - INFO - Using default tokenizer.
+2026-03-10 13:12:03,288 - INFO - Using default tokenizer.
+2026-03-10 13:12:32,347 - INFO - Using default tokenizer.
+2026-03-10 13:13:01,510 - INFO - Using default tokenizer.
+2026-03-10 13:13:30,660 - INFO - Using default tokenizer.
+2026-03-10 13:13:59,710 - INFO - Using default tokenizer.
+2026-03-10 13:14:28,997 - INFO - Using default tokenizer.
+2026-03-10 13:14:58,063 - INFO - Using default tokenizer.
+2026-03-10 13:15:27,144 - INFO - Using default tokenizer.
+2026-03-10 13:15:56,314 - INFO - Using default tokenizer.
+2026-03-10 13:16:25,347 - INFO - Using default tokenizer.
+2026-03-10 13:16:54,244 - INFO - Using default tokenizer.
+2026-03-10 13:17:23,213 - INFO - Using default tokenizer.
+2026-03-10 13:17:52,360 - INFO - Using default tokenizer.
+2026-03-10 13:18:21,487 - INFO - Using default tokenizer.
+2026-03-10 13:18:50,506 - INFO - Using default tokenizer.
+2026-03-10 13:19:19,532 - INFO - Using default tokenizer.
+2026-03-10 13:19:48,523 - INFO - Using default tokenizer.
+2026-03-10 13:20:17,501 - INFO - Using default tokenizer.
+2026-03-10 13:20:46,565 - INFO - Using default tokenizer.
+2026-03-10 13:21:15,576 - INFO - Using default tokenizer.
+2026-03-10 13:21:44,721 - INFO - Using default tokenizer.
+2026-03-10 13:22:13,869 - INFO - Using default tokenizer.
+2026-03-10 13:22:42,962 - INFO - Using default tokenizer.
+2026-03-10 13:23:12,025 - INFO - Using default tokenizer.
+2026-03-10 13:23:41,063 - INFO - Using default tokenizer.
+2026-03-10 13:24:10,074 - INFO - Using default tokenizer.
+2026-03-10 13:24:39,169 - INFO - Using default tokenizer.
+2026-03-10 13:25:08,202 - INFO - Using default tokenizer.
+2026-03-10 13:25:37,346 - INFO - Using default tokenizer.
+2026-03-10 13:26:06,378 - INFO - Using default tokenizer.
+2026-03-10 13:26:35,428 - INFO - Using default tokenizer.
+2026-03-10 13:27:04,403 - INFO - Using default tokenizer.
+2026-03-10 13:27:33,487 - INFO - Using default tokenizer.
+2026-03-10 13:28:02,556 - INFO - Using default tokenizer.
+2026-03-10 13:28:31,480 - INFO - Using default tokenizer.
+2026-03-10 13:29:00,480 - INFO - Using default tokenizer.
+2026-03-10 13:29:29,605 - INFO - Using default tokenizer.
+2026-03-10 13:29:58,513 - INFO - Using default tokenizer.
+2026-03-10 13:30:27,517 - INFO - Using default tokenizer.
+2026-03-10 13:30:56,567 - INFO - Using default tokenizer.
+2026-03-10 13:31:25,672 - INFO - Using default tokenizer.
+2026-03-10 13:31:54,770 - INFO - Using default tokenizer.
+2026-03-10 13:32:23,800 - INFO - Using default tokenizer.
+2026-03-10 13:32:52,833 - INFO - Using default tokenizer.
+2026-03-10 13:33:21,949 - INFO - Using default tokenizer.
+2026-03-10 13:33:50,942 - INFO - Using default tokenizer.
+2026-03-10 13:34:20,076 - INFO - Using default tokenizer.
+2026-03-10 13:34:49,110 - INFO - Using default tokenizer.
+2026-03-10 13:35:18,216 - INFO - Using default tokenizer.
+2026-03-10 13:35:47,227 - INFO - Using default tokenizer.
+2026-03-10 13:36:16,296 - INFO - Using default tokenizer.
+2026-03-10 13:36:45,408 - INFO - Using default tokenizer.
+2026-03-10 13:37:14,581 - INFO - Using default tokenizer.
+2026-03-10 13:37:43,686 - INFO - Using default tokenizer.
+2026-03-10 13:38:13,050 - INFO - Using default tokenizer.
+2026-03-10 13:38:42,204 - INFO - Using default tokenizer.
+2026-03-10 13:39:11,355 - INFO - Using default tokenizer.
+2026-03-10 13:39:40,331 - INFO - Using default tokenizer.
+2026-03-10 13:40:09,273 - INFO - Using default tokenizer.
+2026-03-10 13:40:38,900 - INFO - Using default tokenizer.
+2026-03-10 13:41:07,941 - INFO - Using default tokenizer.
+2026-03-10 13:41:36,828 - INFO - Using default tokenizer.
+2026-03-10 13:42:05,851 - INFO - Using default tokenizer.
+2026-03-10 13:42:34,888 - INFO - Using default tokenizer.
+2026-03-10 13:43:03,784 - INFO - Using default tokenizer.
+2026-03-10 13:43:32,793 - INFO - Using default tokenizer.
+2026-03-10 13:44:01,715 - INFO - Using default tokenizer.
+2026-03-10 13:44:30,770 - INFO - Using default tokenizer.
+2026-03-10 13:44:59,703 - INFO - Using default tokenizer.
+2026-03-10 13:45:28,794 - INFO - Using default tokenizer.
+2026-03-10 13:45:57,791 - INFO - Using default tokenizer.
+2026-03-10 13:46:26,779 - INFO - Using default tokenizer.
+2026-03-10 13:46:55,755 - INFO - Using default tokenizer.
+2026-03-10 13:47:24,873 - INFO - Using default tokenizer.
+2026-03-10 13:47:53,900 - INFO - Using default tokenizer.
+2026-03-10 13:48:22,658 - INFO - Using default tokenizer.
+2026-03-10 13:48:51,437 - INFO - Using default tokenizer.
+2026-03-10 13:49:20,260 - INFO - Using default tokenizer.
+2026-03-10 13:49:49,150 - INFO - Using default tokenizer.
+2026-03-10 13:50:17,985 - INFO - Using default tokenizer.
+2026-03-10 13:50:46,825 - INFO - Using default tokenizer.
+2026-03-10 13:51:15,826 - INFO - Using default tokenizer.
+2026-03-10 13:51:44,672 - INFO - Using default tokenizer.
+2026-03-10 13:52:13,514 - INFO - Using default tokenizer.
+2026-03-10 13:52:42,350 - INFO - Using default tokenizer.
+2026-03-10 13:53:11,302 - INFO - Using default tokenizer.
+2026-03-10 13:53:40,147 - INFO - Using default tokenizer.
+2026-03-10 13:54:09,067 - INFO - Using default tokenizer.
+2026-03-10 13:54:37,846 - INFO - Using default tokenizer.
+2026-03-10 13:55:06,939 - INFO - Using default tokenizer.
+2026-03-10 13:55:35,802 - INFO - Using default tokenizer.
+2026-03-10 13:56:04,597 - INFO - Using default tokenizer.
+2026-03-10 13:56:33,425 - INFO - Using default tokenizer.
+2026-03-10 13:57:02,300 - INFO - Using default tokenizer.
+2026-03-10 13:57:31,246 - INFO - Using default tokenizer.
+2026-03-10 13:58:00,188 - INFO - Using default tokenizer.
+2026-03-10 13:58:28,862 - INFO - Using default tokenizer.
+2026-03-10 13:58:57,394 - INFO - Using default tokenizer.
+2026-03-10 13:59:26,006 - INFO - Using default tokenizer.
+2026-03-10 13:59:54,655 - INFO - Using default tokenizer.
+2026-03-10 14:00:23,150 - INFO - Using default tokenizer.
+2026-03-10 14:00:51,775 - INFO - Using default tokenizer.
+2026-03-10 14:01:20,327 - INFO - Using default tokenizer.
+2026-03-10 14:01:49,097 - INFO - Using default tokenizer.
+2026-03-10 14:02:18,082 - INFO - Using default tokenizer.
+2026-03-10 14:02:47,040 - INFO - Using default tokenizer.
+2026-03-10 14:03:16,060 - INFO - Using default tokenizer.
+2026-03-10 14:03:45,011 - INFO - Using default tokenizer.
+2026-03-10 14:04:13,945 - INFO - Using default tokenizer.
+2026-03-10 14:04:42,900 - INFO - Using default tokenizer.
+2026-03-10 14:05:11,861 - INFO - Using default tokenizer.
+2026-03-10 14:05:40,896 - INFO - Using default tokenizer.
+2026-03-10 14:06:09,843 - INFO - Using default tokenizer.
+2026-03-10 14:06:38,775 - INFO - Using default tokenizer.
+2026-03-10 14:07:07,639 - INFO - Using default tokenizer.
+2026-03-10 14:07:36,501 - INFO - Using default tokenizer.
+2026-03-10 14:08:05,288 - INFO - Using default tokenizer.
+2026-03-10 14:08:34,065 - INFO - Using default tokenizer.
+2026-03-10 14:09:02,815 - INFO - Using default tokenizer.
+2026-03-10 14:09:31,616 - INFO - Using default tokenizer.
+2026-03-10 14:10:00,326 - INFO - Using default tokenizer.
+2026-03-10 14:10:29,099 - INFO - Using default tokenizer.
+2026-03-10 14:10:29,260 - INFO - Сохранение CSV в results_base_rag/results_base_rag.csv
+2026-03-10 14:10:29,273 - INFO - Сохранение JSON в results_base_rag/summary_base_rag.json
+2026-03-10 14:10:29,273 - INFO - Результаты сохранены в results_base_rag
+2026-03-10 14:10:29,274 - INFO - Средние метрики для base_rag:
+2026-03-10 14:10:29,274 - INFO -   ROUGE-L: 0.2731 (цель ≥0.5) ❌
+2026-03-10 14:10:29,274 - INFO -   BERTScore F1: 0.6930 (цель ≥0.8) ❌
+2026-03-10 14:10:29,274 - INFO -   F1 факты: 0.4317 (цель ≥0.75) ❌
+2026-03-10 14:10:29,274 - INFO -   Примеров с фактами: 156, без фактов: 60

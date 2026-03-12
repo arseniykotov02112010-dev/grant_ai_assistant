@@ -1,0 +1,149 @@
+2026-03-10 22:25:12,053 - INFO - ============================================================
+2026-03-10 22:25:12,054 - INFO - ЗАПУСК ОЦЕНКИ FAITHFULNESS
+2026-03-10 22:25:12,054 - INFO - ============================================================
+2026-03-10 22:25:12,061 - INFO - Загружено 216 уникальных контекстов. Дубликатов: 0
+2026-03-10 22:25:12,074 - INFO - Загружено 216 записей
+2026-03-10 22:25:12,938 - INFO - HTTP Request: POST https://rest-assistant.api.cloud.yandex.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+2026-03-10 22:25:12,939 - ERROR - Ошибка подключения к API. Проверьте ключ и folder_id.
+Traceback (most recent call last):
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/scripts/evaluate_faithfulness.py", line 192, in test_api_access
+    response = client.chat.completions.create(
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: request-id: f9c707de-c114-41f1-bf33-d008823d405b
+trace-id: -
+2026-03-10 22:25:39,464 - INFO - ============================================================
+2026-03-10 22:25:39,466 - INFO - ЗАПУСК ОЦЕНКИ FAITHFULNESS
+2026-03-10 22:25:39,466 - INFO - ============================================================
+2026-03-10 22:25:39,476 - INFO - Загружено 216 уникальных контекстов. Дубликатов: 0
+2026-03-10 22:25:39,509 - INFO - Загружено 216 записей
+2026-03-10 22:25:39,859 - INFO - HTTP Request: POST https://rest-assistant.api.cloud.yandex.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+2026-03-10 22:25:39,860 - ERROR - Ошибка подключения к API. Проверьте ключ и folder_id.
+Traceback (most recent call last):
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/scripts/evaluate_faithfulness.py", line 192, in test_api_access
+    response = client.chat.completions.create(
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: request-id: 48dd89d1-e651-41d5-8fc0-c97d131c6de5
+trace-id: -
+2026-03-10 22:25:56,205 - INFO - ============================================================
+2026-03-10 22:25:56,206 - INFO - ЗАПУСК ОЦЕНКИ FAITHFULNESS
+2026-03-10 22:25:56,206 - INFO - ============================================================
+2026-03-10 22:25:56,210 - INFO - Загружено 216 уникальных контекстов. Дубликатов: 0
+2026-03-10 22:25:56,220 - INFO - Загружено 216 записей
+2026-03-10 22:25:56,497 - INFO - HTTP Request: POST https://rest-assistant.api.cloud.yandex.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+2026-03-10 22:25:56,498 - ERROR - Ошибка подключения к API. Проверьте ключ и folder_id.
+Traceback (most recent call last):
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/scripts/evaluate_faithfulness.py", line 192, in test_api_access
+    response = client.chat.completions.create(
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: request-id: aacd4523-be27-4410-97d5-af5cb0c18331
+trace-id: -
+2026-03-10 22:28:42,510 - INFO - ============================================================
+2026-03-10 22:28:42,510 - INFO - ЗАПУСК ОЦЕНКИ FAITHFULNESS
+2026-03-10 22:28:42,510 - INFO - ============================================================
+2026-03-10 22:28:42,513 - INFO - Загружено 216 уникальных контекстов. Дубликатов: 0
+2026-03-10 22:28:42,525 - INFO - Загружено 216 записей
+2026-03-10 22:28:42,679 - ERROR - Ошибка подключения к API. Проверьте ключ и folder_id.
+Traceback (most recent call last):
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/scripts/evaluate_faithfulness.py", line 189, in test_api_access
+    response = client.chat.completions.create(
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_base_client.py", line 991, in request
+    request = self._build_request(options, retries_taken=retries_taken)
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_base_client.py", line 510, in _build_request
+    headers = self._build_headers(options, retries_taken=retries_taken)
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_base_client.py", line 443, in _build_headers
+    headers = httpx.Headers(headers_dict)
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/httpx/_models.py", line 156, in __init__
+    bytes_value = _normalize_header_value(v, encoding)
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/httpx/_models.py", line 82, in _normalize_header_value
+    return value.encode(encoding or "ascii")
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 7-9: ordinal not in range(128)
+2026-03-10 22:30:49,329 - INFO - ============================================================
+2026-03-10 22:30:49,329 - INFO - ЗАПУСК ОЦЕНКИ FAITHFULNESS
+2026-03-10 22:30:49,329 - INFO - ============================================================
+2026-03-10 22:30:49,335 - INFO - Загружено 216 уникальных контекстов. Дубликатов: 0
+2026-03-10 22:30:49,345 - INFO - Загружено 216 записей
+2026-03-10 22:30:49,657 - INFO - HTTP Request: POST https://llm.api.cloud.yandex.net/foundation-models/v1/chat/completions "HTTP/1.1 404 Not Found"
+2026-03-10 22:30:49,658 - ERROR - Ошибка подключения к API. Проверьте ключ и folder_id.
+Traceback (most recent call last):
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/scripts/evaluate_faithfulness.py", line 189, in test_api_access
+    response = client.chat.completions.create(
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/faith_env/lib/python3.9/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: request-id: 164127ff-058c-4a2f-8aa7-86dbb52ee43c
+trace-id: -
+2026-03-10 22:35:20,278 - INFO - ============================================================
+2026-03-10 22:35:20,279 - INFO - ЗАПУСК ОЦЕНКИ FAITHFULNESS
+2026-03-10 22:35:20,280 - INFO - ============================================================
+2026-03-10 22:35:20,289 - INFO - Загружено 216 уникальных контекстов. Дубликатов: 0
+2026-03-10 22:35:20,309 - INFO - Загружено 216 записей
+2026-03-10 22:35:20,472 - ERROR - Ошибка доступа к API: 404 - 
+request-id: e0fb0c1f-f6ad-43c9-ba24-f39762e83203
+trace-id: -
+
+2026-03-10 22:48:55,800 - INFO - ============================================================
+2026-03-10 22:48:55,800 - INFO - ЗАПУСК ОЦЕНКИ FAITHFULNESS
+2026-03-10 22:48:55,800 - INFO - ============================================================
+2026-03-10 22:48:55,804 - INFO - Загружено 216 уникальных контекстов. Дубликатов: 0
+2026-03-10 22:48:55,814 - INFO - Загружено 216 записей
+2026-03-10 22:48:55,982 - ERROR - Ошибка доступа к API: 404 - 
+request-id: ecaba6b9-df82-4f00-aee4-4198b4f7d7cf
+trace-id: -
+
+2026-03-10 22:54:00,275 - INFO - ============================================================
+2026-03-10 22:54:00,275 - INFO - ЗАПУСК ОЦЕНКИ FAITHFULNESS
+2026-03-10 22:54:00,275 - INFO - ============================================================
+2026-03-10 22:54:00,278 - INFO - Загружено 216 уникальных контекстов. Дубликатов: 0
+2026-03-10 22:54:00,289 - INFO - Загружено 216 записей
+2026-03-10 22:54:00,503 - ERROR - Ошибка доступа к API: 401 - {"error":{"grpcCode":16,"httpCode":401,"message":"Unknown api key 't1.9****gzDQ (8BBD2D91)'","httpStatus":"Unauthorized","details":[]}}
+2026-03-10 22:54:36,968 - INFO - ============================================================
+2026-03-10 22:54:36,968 - INFO - ЗАПУСК ОЦЕНКИ FAITHFULNESS
+2026-03-10 22:54:36,968 - INFO - ============================================================
+2026-03-10 22:54:36,971 - INFO - Загружено 216 уникальных контекстов. Дубликатов: 0
+2026-03-10 22:54:36,982 - INFO - Загружено 216 записей
+2026-03-10 22:54:37,483 - WARNING - ✓ API отвечает, но неожиданный ответ: работает.
+2026-03-10 22:54:37,496 - INFO - Начало оценки 216 примеров (потоков: 1)...
+2026-03-10 22:58:14,927 - INFO - Результаты сохранены в /Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/evaluation/results_finetuned_rag/results_finetuned_rag_with_faithfulness.csv
+2026-03-10 22:58:14,931 - INFO - Отчёт сохранён в /Users/macbook/PycharmProjects/PythonProject/grant_ai_assistant/evaluation/results_finetuned_rag/faithfulness_report.json
+2026-03-10 22:58:14,931 - INFO - ============================================================
+2026-03-10 22:58:14,931 - INFO - ИТОГОВЫЙ ОТЧЁТ ПО FAITHFULNESS
+2026-03-10 22:58:14,931 - INFO - ============================================================
+2026-03-10 22:58:14,931 - INFO - Всего записей: 216
+2026-03-10 22:58:14,931 - INFO - Оценено примеров: 216
+2026-03-10 22:58:14,931 - INFO - Faithfulness: 86.11%
+2026-03-10 22:58:14,931 - INFO -   - Соответствуют (ДА): 186
+2026-03-10 22:58:14,931 - INFO -   - Не соответствуют (НЕТ): 30
+2026-03-10 22:58:14,931 - INFO -   - Не оценено: 0
+2026-03-10 22:58:14,931 - INFO - ============================================================

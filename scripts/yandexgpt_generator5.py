@@ -7,8 +7,8 @@ from typing import List, Dict, Any
 
 # ==================== КОНФИГУРАЦИЯ ====================
 # ВАЖНО: Замените эти значения на СВОИ
-YANDEX_CLOUD_FOLDER = "Ваш folder_id"
-YANDEX_CLOUD_API_KEY = "Ваш IAM-токен"
+YANDEX_CLOUD_FOLDER = "вставьте свое"
+YANDEX_CLOUD_API_KEY = "вставьте свое"
 YANDEX_CLOUD_MODEL = "yandexgpt/rc"  # Модель
 
 # Настройка клиента OpenAI для YandexGPT

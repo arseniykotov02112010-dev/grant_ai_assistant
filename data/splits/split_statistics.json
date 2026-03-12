@@ -1,14 +1,14 @@
 {
   "train": {
-    "docs": 128,
-    "qa_pairs": 1022
+    "docs": 122,
+    "qa_pairs": 974
   },
   "val": {
-    "docs": 27,
-    "qa_pairs": 216
+    "docs": 26,
+    "qa_pairs": 207
   },
   "test": {
-    "docs": 28,
-    "qa_pairs": 223
+    "docs": 27,
+    "qa_pairs": 216
   }
 }

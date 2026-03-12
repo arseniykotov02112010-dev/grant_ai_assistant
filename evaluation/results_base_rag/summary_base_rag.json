@@ -1,0 +1,15 @@
+{
+  "mode": "base_rag",
+  "num_examples": 216,
+  "examples_with_facts": 156,
+  "examples_without_facts": 60,
+  "avg_rougeL": 0.2731499720011028,
+  "avg_bertscore_f1": 0.6929701848162545,
+  "avg_f1_facts": 0.4317397199750141,
+  "target_rougeL": 0.5,
+  "target_bertscore_f1": 0.8,
+  "target_f1_facts": 0.75,
+  "rougeL_met": false,
+  "bertscore_met": false,
+  "f1_facts_met": false
+}
