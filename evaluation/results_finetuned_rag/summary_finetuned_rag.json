@@ -9,7 +9,7 @@
   "target_rougeL": 0.5,
   "target_bertscore_f1": 0.8,
   "target_f1_facts": 0.75,
-  "rougeL_met": false,
+  "rougeL_met": true,
   "bertscore_met": true,
   "f1_facts_met": true
 }
