@@ -1,24 +1,25 @@
 """
 main.py – FastAPI приложение для RAG-сервиса.
-Поддерживает загрузку PDF и DOCX.
+Исправлено: устранение повторений, жёсткий промпт, постобработка,
+все слои модели на GPU (Tesla T4).
 """
 
 import logging
+import re
 from fastapi import FastAPI, UploadFile, File, HTTPException
-from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from typing import List, Optional
+
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from backend.config import EMBEDDING_MODEL_NAME, GGUF_MODEL_PATH, SESSION_TIMEOUT
 from backend.document_utils import extract_text_from_pdf, extract_text_from_docx
 from backend.session_manager import SessionManager
 from sentence_transformers import SentenceTransformer
 from llama_cpp import Llama
-import time
 
 logger = logging.getLogger(__name__)
 
-# Глобальные объекты
 embedding_model = None
 llm = None
 session_manager = None
@@ -36,6 +37,38 @@ class AskResponse(BaseModel):
     sources: List[str] = []
 
 
+def clean_repetitions(text: str) -> str:
+    """
+    Удаляет повторяющиеся предложения и длинные подстроки.
+    Возвращает текст, обрезанный до первого повторения.
+    """
+    if not text:
+        return text
+
+    # 1. Удаляем последовательные дублирующиеся предложения
+    sentences = re.split(r'(?<=[.!?])\s+', text)
+    seen = set()
+    cleaned_sentences = []
+    for sent in sentences:
+        sent_clean = sent.strip()
+        if len(sent_clean) < 10:
+            cleaned_sentences.append(sent)
+            continue
+        if sent_clean in seen:
+            break
+        seen.add(sent_clean)
+        cleaned_sentences.append(sent)
+    text = ' '.join(cleaned_sentences)
+
+    # 2. Ищем повторяющиеся подстроки любой длины (>40 символов)
+    pattern = r'(.{40,}?)\1'
+    match = re.search(pattern, text)
+    if match:
+        text = text[:match.start()] + match.group(1)
+
+    return text.strip()
+
+
 @app.get("/health")
 async def health_check():
     return {
@@ -47,7 +80,6 @@ async def health_check():
 
 @app.post("/upload")
 async def upload_document(file: UploadFile = File(...)):
-    # Проверка расширения
     filename = file.filename.lower()
     if not (filename.endswith('.pdf') or filename.endswith('.docx')):
         raise HTTPException(status_code=400, detail="Only PDF or DOCX files are allowed")
@@ -57,13 +89,12 @@ async def upload_document(file: UploadFile = File(...)):
         if len(file_bytes) == 0:
             raise HTTPException(status_code=400, detail="Empty file")
 
-        # Извлечение текста в зависимости от типа
         if filename.endswith('.pdf'):
             text = extract_text_from_pdf(file_bytes)
-        else:  # .docx
+        else:
             text = extract_text_from_docx(file_bytes)
 
-        if not text.strip():
+        if not text or not text.strip():
             raise HTTPException(status_code=400, detail="Document contains no extractable text")
 
         session_id = session_manager.create_session(text, file.filename)
@@ -88,37 +119,50 @@ async def ask_question(request: AskRequest):
 
         context = "\n---\n".join(chunks)
 
-        # Новый промпт с чёткими инструкциями
-        prompt = f"""Ты — эксперт по грантовой документации. Отвечай на вопрос, используя только приведённый ниже контекст. Контекст содержит текст документа без служебных пометок.
+        # Жёсткий промпт: краткость, запрет повторов
+        prompt = f"""Ты — эксперт по грантовой документации. Отвечай на вопрос, используя только контекст.
 
-        Если в контексте нет информации, ответь ровно одной фразой: "Информация отсутствует".
+Правила:
+1. Ответ должен быть кратким — одно или два предложения.
+2. Не повторяй одну и ту же информацию.
+3. Не используй слова "контекст", "документ", "согласно".
+4. Если ответа нет, скажи: "Информация отсутствует".
 
-        Ответ должен быть кратким, содержать только факты из контекста. Не добавляй никаких пояснений, не цитируй контекст, не повторяй вопрос. Не используй слова "контекст", "документ", "согласно" и т.п. Только сухой ответ.
+Контекст:
+{context}
 
-        Контекст:
-        {context}
+Вопрос: {request.question}
 
-        Вопрос: {request.question}
-
-        Ответ:"""
+Ответ (только факты, не более двух предложений):"""
 
         import time
         start = time.time()
 
-        # Добавляем параметры для предотвращения зацикливания
         output = llm(
             prompt,
-            max_tokens=256,
-            temperature=0.1,
+            max_tokens=128,               # ограничиваем длину
+            temperature=0.0,              # минимальная креативность
             echo=False,
-            repeat_penalty=1.2,
-            stop=["\nОтвет:", "\nВопрос:", "\nКонтекст:", "Информация отсутствует"]
+            repeat_penalty=1.5,           # жёсткий штраф за повторы
+            top_p=0.9,
+            stop=["\n\n", "Информация отсутствует", "Ответ:", "Вопрос:"]
         )
 
         elapsed = time.time() - start
-        logger.info(f"LLM generation took {elapsed:.2f} seconds for session {request.session_id}")
+        logger.info(f"LLM generation took {elapsed:.2f} seconds")
 
         answer = output["choices"][0]["text"].strip()
+        answer = clean_repetitions(answer)
+
+        if not answer:
+            answer = "Информация отсутствует."
+
+        # Если ответ всё ещё слишком длинный, обрезаем до первого предложения
+        if len(answer) > 300:
+            first_sentence = re.split(r'(?<=[.!?])\s+', answer)[0]
+            if len(first_sentence) > 50:
+                answer = first_sentence
+
         return AskResponse(answer=answer, sources=chunks)
 
     except HTTPException:
@@ -126,6 +170,8 @@ async def ask_question(request: AskRequest):
     except Exception as e:
         logger.exception("Error in /ask")
         raise HTTPException(status_code=500, detail=str(e))
+
+
 @app.on_event("startup")
 async def startup_event():
     global embedding_model, llm, session_manager
@@ -138,7 +184,7 @@ async def startup_event():
     llm = Llama(
         model_path=str(GGUF_MODEL_PATH),
         n_ctx=2048,
-        n_gpu_layers=-1,  # все слои на GPU
+        n_gpu_layers=36,          # все 36 слоёв модели на GPU
         verbose=False
     )
     logger.info("LLM loaded.")
@@ -151,4 +197,3 @@ async def startup_event():
 @app.on_event("shutdown")
 async def shutdown_event():
     logger.info("Shutting down...")
-    # При необходимости закрыть ресурсы (например, LLM)

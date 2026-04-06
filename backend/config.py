@@ -16,8 +16,7 @@ EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-small"
 GGUF_MODEL_PATH = BASE_DIR / "model" / "qvikhr-grant-q4_k_m.gguf"
 
 # ========== ПАРАМЕТРЫ ЧАНКИНГА ==========
-CHUNK_SIZE = 5
-00          # размер чанка в символах
+CHUNK_SIZE = 700     # размер чанка в символах
 CHUNK_OVERLAP = 150       # перекрытие между чанками
 
 # ========== ПАРАМЕТРЫ ПОИСКА ==========

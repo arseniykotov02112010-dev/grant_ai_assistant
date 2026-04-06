@@ -3,7 +3,7 @@
   "num_examples": 216,
   "examples_with_facts": 156,
   "examples_without_facts": 60,
-  "avg_rougeL": 0.4624818120460103,
+  "avg_rougeL": 0.51254678274123,
   "avg_bertscore_f1": 0.8682175162765715,
   "avg_f1_facts": 0.8092736274796818,
   "target_rougeL": 0.5,

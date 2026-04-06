@@ -1,0 +1,77 @@
+2026-03-09 14:34:57,808 - INFO - ============================================================
+2026-03-09 14:34:57,808 - INFO - ЗАПУСК FINE-TUNING QVikhr-3-4B С QLoRA
+2026-03-09 14:34:57,808 - INFO - ============================================================
+2026-03-09 14:34:57,809 - INFO - PyTorch: 2.10.0+cu128
+2026-03-09 14:34:57,809 - INFO - Transformers: 5.3.0
+2026-03-09 14:34:57,809 - INFO - PEFT: 0.18.1
+2026-03-09 14:34:57,809 - INFO - bitsandbytes: 0.49.2
+2026-03-09 14:34:57,809 - INFO - CUDA available: True
+2026-03-09 14:34:57,809 - INFO - Device: Tesla T4
+2026-03-09 14:34:57,809 - INFO - Memory: 16.72 GB
+2026-03-09 14:34:57,810 - INFO - Train: /root/data/splits/train.jsonl
+2026-03-09 14:34:57,810 - INFO - Val: /root/data/splits/val.jsonl
+2026-03-09 14:34:57,811 - INFO - Output: /root/models/qvikhr-grant-lora
+2026-03-09 14:34:57,811 - INFO - Загрузка модели Vikhrmodels/QVikhr-3-4B-Instruction в 4-bit...
+2026-03-09 14:34:58,178 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-09 14:34:58,234 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/config.json "HTTP/1.1 200 OK"
+2026-03-09 14:34:58,425 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-09 14:34:58,426 - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-09 14:34:58,480 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-09 14:34:58,651 - INFO - HTTP Request: GET https://huggingface.co/api/models/Vikhrmodels/QVikhr-3-4B-Instruction/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-09 14:34:58,824 - INFO - HTTP Request: GET https://huggingface.co/api/models/Vikhrmodels/QVikhr-3-4B-Instruction/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-09 14:35:00,487 - INFO - HTTP Request: GET https://huggingface.co/api/models/Vikhrmodels/QVikhr-3-4B-Instruction "HTTP/1.1 200 OK"
+2026-03-09 14:35:00,668 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-09 14:35:00,715 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/config.json "HTTP/1.1 200 OK"
+2026-03-09 14:35:00,893 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-09 14:35:00,947 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/config.json "HTTP/1.1 200 OK"
+2026-03-09 14:35:07,572 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-09 14:35:07,591 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Vikhrmodels/QVikhr-3-4B-Instruction/b2a4232a1f3e5833ee0c48450374201f4a07eab7/generation_config.json "HTTP/1.1 200 OK"
+2026-03-09 14:35:07,743 - INFO - HTTP Request: HEAD https://huggingface.co/Vikhrmodels/QVikhr-3-4B-Instruction/resolve/main/custom_generate/generate.py "HTTP/1.1 404 Not Found"
+2026-03-09 14:35:08,624 - INFO - Trainable params: 33030144 (1.48% of all)
+2026-03-09 14:35:08,624 - INFO - Загрузка train...
+2026-03-09 14:35:09,054 - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+2026-03-09 14:35:09,200 - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+2026-03-09 14:35:09,208 - INFO - Train: 974 записей, Val: 207 записей
+2026-03-09 14:35:20,540 - INFO - Найдено начало ответа: train 974/974, val 207/207
+2026-03-09 14:35:20,555 - INFO - После фильтрации: train 974, val 207
+2026-03-09 14:35:20,558 - INFO - Первый пример: 49/510 токенов участвуют в loss.
+2026-03-09 14:35:20,563 - INFO - Эффективный batch: 8, шагов/эпоха: ~121
+2026-03-09 14:35:20,664 - INFO - 🚀 Старт обучения...
+2026-03-09 14:35:21,202 - ERROR - Ошибка во время обучения
+Traceback (most recent call last):
+  File "/root/grant_env_new/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 731, in convert_to_tensors
+    tensor = as_tensor(value)
+  File "/root/grant_env_new/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 690, in as_tensor
+    return torch.tensor(value, dtype=dtype)
+ValueError: expected sequence of length 977 at dim 1 (got 841)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/finetune_qlora_final.py", line 465, in main
+    trainer.train()
+  File "/root/grant_env_new/lib/python3.10/site-packages/transformers/trainer.py", line 1424, in train
+    return inner_training_loop(
+  File "/root/grant_env_new/lib/python3.10/site-packages/transformers/trainer.py", line 1506, in _inner_training_loop
+    self._run_epoch(
+  File "/root/grant_env_new/lib/python3.10/site-packages/transformers/trainer.py", line 1701, in _run_epoch
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, self.args.device)
+  File "/root/grant_env_new/lib/python3.10/site-packages/transformers/trainer.py", line 2102, in get_batch_samples
+    batch_samples.append(next(epoch_iterator))
+  File "/root/grant_env_new/lib/python3.10/site-packages/accelerate/data_loader.py", line 577, in __iter__
+    current_batch = next(dataloader_iter)
+  File "/root/grant_env_new/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 741, in __next__
+    data = self._next_data()
+  File "/root/grant_env_new/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 801, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/root/grant_env_new/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 57, in fetch
+    return self.collate_fn(data)
+  File "/root/finetune_qlora_final.py", line 409, in __call__
+    batch = self.tokenizer.pad(
+  File "/root/grant_env_new/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2715, in pad
+    return BatchEncoding(batch_outputs, tensor_type=return_tensors)
+  File "/root/grant_env_new/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 240, in __init__
+    self.convert_to_tensors(tensor_type=tensor_type, prepend_batch_axis=prepend_batch_axis)
+  File "/root/grant_env_new/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 747, in convert_to_tensors
+    raise ValueError(
+ValueError: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`labels` in this case) have excessive nesting (inputs type `list` where type `int` is expected).
