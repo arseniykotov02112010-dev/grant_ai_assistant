@@ -9,3 +9,4 @@ python-multipart
 pydantic
 aiofiles
 python-docx
+pdfplumber

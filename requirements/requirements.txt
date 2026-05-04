@@ -73,3 +73,4 @@ wrapt==2.1.2
 yandex-ai-studio-sdk==0.19.2
 yandexcloud==0.381.0
 yarl==1.22.0
+pdfplumber==0.11.8

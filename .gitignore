@@ -1,21 +1,15 @@
-# Виртуальные окружения
 venv/
 bot_env/
 faith_env/
 server_env/
-
-# Файлы с секретами
+v2_env/
 .env
 bots/.env
-
-# Базы данных и индексы
 *.sqlite3
 *.bin
 *.pickle
 vector_db/
 data/vector_db/
-
-# Модели и большие файлы
 *.gguf
 model/*.gguf
 model/qvikhr-grant-merged/
@@ -23,16 +17,10 @@ model/qvikhr-grant-lora/checkpoint-*/
 model/qvikhr-grant-lora/*.safetensors
 model/qvikhr-grant-lora/*.bin
 model/qvikhr-grant-lora/*.pt
-
-# Сырые PDF
 data/raw_pdfs/
-
-# Кэш Python
 __pycache__/
 *.pyc
-
-# Локальные файлы персистентности
 *.pickle
-
-# Папка .idea (если не нужна)
-.idea/model/qvikhr-grant-lora/adapter_model.safetensors
+.idea/
+backend_v2/
+chroma_db/
