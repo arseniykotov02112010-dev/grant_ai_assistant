@@ -12,11 +12,11 @@ EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-small"
 GGUF_MODEL_PATH = BASE_DIR / "model" / "qvikhr-grant-q4_k_m.gguf"
 
 # ========== ЧАНКИНГ ==========
-CHUNK_SIZE = 700
-CHUNK_OVERLAP = 250
+CHUNK_SIZE = 1000
+CHUNK_OVERLAP = 300
 
 # ========== ГЕНЕРАЦИЯ ==========
-MAX_TOKENS = 256          # достаточно для коротких точных ответов
+MAX_TOKENS = 1024         
 TEMPERATURE = 0.0         # строгая детерминированность
 REPEAT_PENALTY = 1.1      # умеренный штраф за повторы
 TOP_P = 0.9               # исключение маловероятных токенов
